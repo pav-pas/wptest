@@ -105,9 +105,9 @@ function shortcode_yandex_map( $atts ) {
     
     ob_start();
     ?>
-        ymaps.ready(init<?=$shortYandexMapId?>);
-        function init<?=$shortYandexMapId?>(){
-            new ymaps.Map("<?=$sMapId?>", {
+        ymaps.ready(init<?php echo $shortYandexMapId?>);
+        function init<?php echo $shortYandexMapId?>(){
+            new ymaps.Map("<?php echo $sMapId?>", {
                 center: [<?php echo $sLat?>, <?php echo $sLon?>],
                 zoom: 7
             });
